@@ -5,7 +5,6 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 
 import PropTypes from "prop-types";
 import React from "react";
-import { IconsSettings24Px11 } from "../../icons/IconsSettings24Px11";
 
 interface Props {
   configuration: "filled" | "outlined" | "tonal" | "standard";
@@ -17,7 +16,6 @@ interface Props {
 export const IconButton = ({
   configuration,
   state,
-  icon = <IconsSettings24Px11 className="!relative !w-[24px] !h-[24px]" color="#49454F" />,
   className,
 }: Props): JSX.Element => {
   return (
@@ -111,7 +109,6 @@ export const IconButton = ({
               : ""
           }`}
         >
-          {icon}
         </div>
       </div>
     </div>
