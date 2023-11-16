@@ -1,4 +1,4 @@
-import { TextField } from ".";
+import { TextField } from "../components/TextField";
 
 export default {
   title: "Components/TextField",

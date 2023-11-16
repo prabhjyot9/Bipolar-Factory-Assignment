@@ -59,8 +59,7 @@ export const TextField = ({
               <IconButton
                 configuration="standard"
                 icon={<IconsSearch24Px className="!relative !w-[24px] !h-[24px]" />}
-                state="enabled"
-              />
+                state="enabled" className={undefined}              />
             )}
 
             <div className="flex flex-col items-start grow flex-1 h-[40px] justify-center relative">
@@ -126,19 +125,16 @@ export const TextField = ({
             {trailingIcon && leadingIcon && (
               <IconButton
                 configuration="standard"
-                icon={
-                  state === "error" ? (
-                    <IconsError24Px className="!relative !w-[24px] !h-[24px]" />
-                  ) : (
-                    <IconsCancel24Px1 className="!relative !w-[24px] !h-[24px]" color="#49454F" />
-                  )
-                }
-                state="enabled"
-              />
+                icon={state === "error" ? (
+                  <IconsError24Px className="!relative !w-[24px] !h-[24px]" />
+                ) : (
+                  <IconsCancel24Px1 className="!relative !w-[24px] !h-[24px]" color="#49454F" />
+                )}
+                state="enabled" className={undefined}              />
             )}
 
             {trailingIcon && !leadingIcon && (
-              <IconButton configuration="standard" icon={iconButtonIcon} state="enabled" />
+              <IconButton configuration="standard" icon={iconButtonIcon} state="enabled" className={undefined} />
             )}
           </div>
         </div>
@@ -301,24 +297,7 @@ export const TextField = ({
                 />
               )}
 
-              {trailingIcon && !leadingIcon && (
-                <IconButton
-                  className={state === "disabled" ? "!opacity-[0.38]" : undefined}
-                  configuration="standard"
-                  icon={
-                    (state === "disabled" && textConfigurations === "input-text") ||
-                    (state === "disabled" && textConfigurations === "label-text") ||
-                    state === "enabled" ||
-                    state === "focused" ||
-                    state === "hovered" ? (
-                      <IconsCancel24Px1 className="!relative !w-[24px] !h-[24px]" color="#49454F" />
-                    ) : state === "error" ? (
-                      <IconsError24Px className="!relative !w-[24px] !h-[24px]" />
-                    ) : undefined
-                  }
-                  state="enabled"
-                />
-              )}
+              {trailingIcon && !leadingIcon}
             </div>
           </div>
           <>
@@ -360,8 +339,7 @@ export const TextField = ({
                 <IconButton
                   configuration="standard"
                   icon={<IconsSearch24Px className="!relative !w-[24px] !h-[24px]" />}
-                  state="enabled"
-                />
+                  state="enabled" className={undefined}                />
               )}
 
               <div className="flex flex-col items-start grow flex-1 h-[40px] justify-center relative">
@@ -412,8 +390,7 @@ export const TextField = ({
                 <IconButton
                   configuration="standard"
                   icon={<IconsCancel24Px1 className="!relative !w-[24px] !h-[24px]" color="#49454F" />}
-                  state="enabled"
-                />
+                  state="enabled" className={undefined}                />
               )}
             </div>
           </div>
